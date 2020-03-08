@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扫码入库</title>
+
+    <style>
+        html,body{
+            width:100%;
+            height:100%;
+            font-size: 16px;
+        }
+        .container {
+            width:100%;
+            height:100%;
+        }
+        .container .wrap{
+            width:100%;
+            line-height: 100%;
+            position: relative;
+        }
+        .container .wrap .select-list{
+            width:30%;
+            height:400px;
+            list-style: none;
+            text-indent: 10px;
+        }
+        .container .wrap .select-list li{
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid #efefef;
+            border-top:none;
+        }
+        .container .wrap .select-list li:first-child{
+            border-top: 1px solid #efefef;
+        }
+        .container .wrap .select-list li a{
+            color:#000;
+            text-decoration: none;
+        }
+        .container .wrap .select-list li.ative{
+            background-color: #efefef;
+        }
+        .container .wrap .select-list li.ative a{
+            color:#c8000b;
+        }
+        .container .wrap .img{
+            width:30%;
+            height: 355px;
+            border: 1px solid #efefef;
+            position: absolute;
+            left:35%;
+            top:0;
+            text-align: center;
+        }
+
+        .container .wrap .img button{
+            width:100px;
+            height:40px;
+        }
+        .container .wrap .img table{
+            width:100%;
+
+        }
+        .container .wrap .img .footer{
+            width: 100%;
+            height:100px;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <ul class="select-list">
+                <li class="ative">
+                  <a href="#">早接</a>
+                </li>
+                <li>
+                    <a href="#">晚送</a>
+                </li>
+                <li>
+                    <a href="#">上介接收</a>
+                </li>
+                <li>
+                    <a href="#">上介发出</a>
+                </li>
+                <li>
+                    <a href="#">下介接收</a>
+                </li>
+                <li>
+                    <a href="#">下介发出</a>
+                </li>
+                <li>
+                    <a href="#">ATM 加钞</a>
+                </li>
+            </ul>
+            <div class="img">
+                <img src="../image/timg.png" alt="">
+                <div>
+                    <table>
+                        <tr>
+                            <td>扫描提示：</td>
+                            <td style="text-align: left">
+                                您今天尚未扫描<span style="color:red">晚送</span>内容
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <button>开始扫描</button>
+                </div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

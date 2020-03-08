@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: #dddddd;
+        }
+
+        #box2{
+                         transform: rotate(180deg) scale(.5, .5);
+                         background: red;
+                         transition: margin-top 2s ease, transform 2s ease-in 1s;
+        }
+
+
+    </style>
+    <script>
+        function doA() {
+            $("#box2").css({"margin-top":"-10px"});
+
+        }
+
+    </script>
+</head>
+<body>
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<div >
+
+</div>
+
+<button onclick="doA()">
+    这是一个控件
+</button>
+
+<div id="box2">BOX2</div>
+</body>
+
+</html>

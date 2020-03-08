@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        div {
+            width: 100%;
+            text-align: center;
+        }
+
+        span {
+            display: inline-block;
+            width: 10%;
+            height: 35px;
+            background-image: url("../image/bg/1.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .header:before{
+            content: "<div class='header-close'>关闭<div>";
+
+        }
+    </style>
+</head>
+<body>
+
+<select id="selectbox" name=""></select>
+<script>
+    var selectbox=document.getElementById("selectbox");
+
+    //生成树下拉菜单
+    var j="-";//前缀符号，用于显示父子关系，这里可以使用其它符号
+    function creatSelectTree(treeJson){
+        console.log(treeJson);
+        var option="";
+        for(var i=0;i<treeJson.length;i++){
+            if(treeJson[i].children && treeJson[i].children.length>0){//如果有子集
+                option+="<option value='"+treeJson[i].id+"'>"+j+treeJson[i].name+"</option>";
+                j+="-";//前缀符号加一个符号
+                option+=creatSelectTree(treeJson[i].children);//递归调用子集
+                j=j.slice(0,j.length-1);//每次递归结束返回上级时，前缀符号需要减一个符号
+            }else{//没有子集直接显示
+                option+="<option value='"+treeJson[i].id+"'>"+j+treeJson[i].name+"</option>";
+            }
+        }
+        return option;//返回最终html结果
+    }
+    var tree =[
+        { id: 19, pid: 0, name: 'nodejs',
+            children:[
+                { id: 20, pid: 19, name: 'express',children:[{ id: 60, pid: 20, name: 'ejs' }]},
+                { id: 21, pid: 19, name: 'mongodb' }
+            ]
+        },
+        { id: 59, pid: 0, name: '前端开发',
+            children:[
+                { id: 70, pid: 59, name: 'javascript' },
+                { id: 71, pid: 59, name: 'css' },
+                { id: 72, pid: 59, name: 'html' },
+                { id: 73, pid: 59, name: 'bootstrap' }
+            ]
+        },
+        { id: 61, pid: 0, name: '视觉设计',children:[{ id: 63, pid: 61, name: '网页设计' }]},
+    ];
+    //调用函数，并将结构出入到下拉框容器中
+    selectbox.innerHTML=creatSelectTree(tree);
+
+</script>
+
+
+</body>
+</html>

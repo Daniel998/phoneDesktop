@@ -1,0 +1,381 @@
+.drag-panel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: none;
+  overflow: hidden;
+}
+
+.drag-panel-container .wrap {
+  background-color: transparent;
+
+}
+
+.drag-panel-container .wrap .wrap-item {
+  position: absolute;
+  border: 1px solid #ddd;
+}
+
+.drag-panel-container .wrap .wrap-item.ative {
+  border: 1px solid #DCDD03;
+}
+
+.drag-panel-container .data-div {
+  background-color: transparent;
+  z-index: 1;
+}
+
+.drag-panel-container .data-div .data-item {
+  position: absolute;
+  text-align: center;
+}
+
+.drag-panel-container .data-div .data-item .image {
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 80%;
+  width: 100%;
+}
+
+.drag-panel-container .data-div .data-item .title {
+
+}
+
+.drag-panel-container .data-div .fold {
+  background-color: rgba(255, 255, 255, .3);
+  border: none;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.drag-panel-container .fold .data-div {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  position: relative;
+  text-align: center;
+
+}
+
+.drag-panel-container .fold .data-div .data-item {
+  width: 33%;
+  height: 30%;
+  position: absolute;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition-property: all;
+  -webkit-transition-property: all;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(2) {
+  left: 33%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(3) {
+  left: 66%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(4) {
+  top: 35%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(5) {
+  left: 33%;
+  top: 35%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(6) {
+  left: 66%;
+  top: 35%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(7) {
+  left: 0%;
+  top: 70%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(8) {
+  left: 33%;
+  top: 70%;
+}
+
+.drag-panel-container .fold .data-div .data-item:nth-child(9) {
+  left: 66%;
+  top: 70%;
+}
+
+.drag-panel-container .fold .data-div:first-child ~ .data-div {
+  display: none;
+}
+
+.drag-panel-container .fold .data-div .data-item .image {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.drag-panel-container .fold .data-div span {
+  display: none;
+}
+
+.drag-panel-container .page-move-bg {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.drag-panel-container .page-move-bg .drag-page {
+  width: 100%;
+  text-align: center;
+  height: 20%;
+  max-height: 25px;
+  line-height: 25px;
+  position: absolute;
+  bottom: 0;
+}
+
+.drag-panel-container .page-move-bg .drag-page span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #a9a9a9;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.drag-panel-container .page-move-bg .drag-page span.ative {
+  background-color: rgb(205, 205, 205);
+}
+
+.drag-enlarge-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  z-index: 99999;
+}
+
+.drag-enlarge-bg .drag-enlarge-content {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  background-color: #fff;
+  top: 20%;
+  left: 10%;
+  border-radius: 5%;
+
+}
+.drag-enlarge-bg .drag-enlarge-content .drag-enlarge-content-border{
+  background: transparent;
+  width:100%;
+  height:87%;
+  border:1px solid #DCDD03;
+  left:0;
+  top:0;
+  position: absolute;
+  border-radius: 5%;
+  display: none;
+}
+.page-border-right {
+  border-right: 2px solid #DCDD03;
+}
+
+.page-border-left {
+  border-left: 2px solid #DCDD03;
+}
+
+.drag-enlarge-bg .drag-enlarge-content.long-click-right {
+  border-right: 2px solid #DCDD03;
+}
+
+.drag-enlarge-bg .drag-enlarge-content.long-click-left {
+  border-left: 2px solid #dcdd03;
+}
+
+.drag-enlarge-bg .drag-enlarge-content.long-click-top {
+  border-top: 2px solid #dcdd03;
+}
+
+.drag-enlarge-bg .drag-enlarge-content.long-click-bottom {
+  border-bottom: 2px solid #dcdd03;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div.ative {
+  border: 1px solid #DCDD03;
+  border-radius: 5%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .wrap span {
+  width: 30%;
+  height: 25%;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .wrap span.ative {
+  border: 1px solid #DCDD03;
+  border-radius: 5%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item {
+  width: 30%;
+  height: 25%;
+  position: absolute;
+  text-align: center;
+
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(1) {
+  left: 2%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .drag-page {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .drag-page span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #a9a9a9;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .drag-page span.ative {
+  background-color: rgb(205, 205, 205);
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item.ative {
+  border: 1px solid #DCDD03;
+  border-radius: 5%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(1),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(1) {
+  top: 2%;
+  left: 2%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(2),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(2) {
+  left: 35%;
+  top: 2%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(3),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(3) {
+  left: 68%;
+  top: 2%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(4),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(4) {
+  left: 2%;
+  top: 31%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(5),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(5) {
+  left: 35%;
+  top: 31%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(6),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(6) {
+  left: 68%;
+  top: 31%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(7),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(7) {
+  left: 2%;
+  top: 60%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(8),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(8) {
+  left: 35%;
+  top: 60%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item:nth-child(9),
+.drag-enlarge-bg .drag-enlarge-content .wrap span:nth-child(9) {
+  left: 68%;
+  top: 60%;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div:first-child ~ .data-div {
+  display: none;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .wrap {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+}
+
+.drag-enlarge-bg .header, body .drag-enlarge-bg .footer {
+  width: 100%;
+  height: 20%;
+  background-color: transparent;
+}
+
+.drag-enlarge-bg .footer {
+  height: 13%;
+  position: absolute;
+  bottom: 0;
+}
+
+.drag-enlarge-bg .drag-enlarge-content .data-div .data-item .image {
+  width: 100%;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.drag-enlarge-bg .title {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  top: 80%;
+  line-height: 35px;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.drag-panel-container .clone-move-item{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  border:1px solid #ccc;
+  text-align: center;
+}
+.drag-panel-container .clone-move-item .image {
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 80%;
+  width: 100%;
+}

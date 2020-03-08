@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <title>测试drag插件开发</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/plug/dragplug/drap-panel.css">
+</head>
+<body>
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/plug/dragplug/DragPlug.js"></script>
+<script>
+    $(function () {
+        $("body").DragManager({
+            initEvent: "touchend",
+            col:4,          // 3 列布局
+            colMargin:"5%", //可以调节元素间的列margin,传入则进行margin处理,否则依计算自动给出，接受单位为%
+            width:"80%",  //格子的宽度,如果传入并且小于平均的宽度则取传入的宽度进行每一项的布局，如果
+            //传入并且大于平均每一项的布局宽度，则取平均值99%（1%为间隔）
+            row:4,          //一屏有多少行，用于计算高度
+            rowMargin:"5%", //可以调节元素间的行margin
+            height:"80%", //每一项的高度，超出100%以100%计算，低于100% 以传入值进行处理
+            borderRadius:"5%" , //圆角效果处理
+            data:[
+                {name:"商家",img:"../image/bg/1.png"},
+                {name:"社区",img:"../image/bg/2.png"},
+                {name:"优惠券",img:"../image/bg/3.png"},
+                {name:"团购",img:"../image/bg/4.png"},
+                {name:"活动",img:"../image/bg/5.png"},
+                {name:"订座",img:"../image/bg/6.png"},
+
+                {name:"订餐",img:"../image/bg/7.png"},
+                {name:"会员卡",img:"../image/bg/8.png"},
+                {name:"附近活动",img:"../image/bg/9.png"},
+
+
+                {name:"同城卖场",img:"../image/bg/10.png",type:"fold",childs:[
+                        {name:"商家1",img:"../image/bg/1.png"},
+                        {name:"社区2",img:"../image/bg/2.png"},
+                        {name:"优惠券3",img:"../image/bg/3.png"},
+                        {name:"团购4",img:"../image/bg/4.png"},
+                        {name:"活动5",img:"../image/bg/5.png"},
+                        {name:"订座6",img:"../image/bg/6.png"},
+                        {name:"商家7",img:"../image/bg/1.png"},
+                        {name:"社区8",img:"../image/bg/2.png"},
+                        {name:"优惠券9",img:"../image/bg/3.png"},
+                        {name:"团购10",img:"../image/bg/4.png"},
+                        {name:"活动11",img:"../image/bg/5.png"},
+                        {name:"订座12",img:"../image/bg/6.png"},
+                        {name:"商家13",img:"../image/bg/1.png"},
+                        {name:"社区14",img:"../image/bg/2.png"},
+                        {name:"优惠券15",img:"../image/bg/3.png"},
+                        {name:"团购16",img:"../image/bg/4.png"},
+                        {name:"活动17",img:"../image/bg/5.png"},
+                        {name:"订座18",img:"../image/bg/6.png"},
+                        {name:"商家19",img:"../image/bg/1.png"},
+                        {name:"社区20",img:"../image/bg/2.png"},
+                        {name:"优惠券21",img:"../image/bg/3.png"},
+                        {name:"团购22",img:"../image/bg/4.png"},
+                        {name:"活动23",img:"../image/bg/5.png"},
+                        {name:"订座24",img:"../image/bg/6.png"}
+
+                    ]},
+                {name:"生活信息",img:"../image/bg/11.png"},
+                {name:"公益捐助",img:"../image/bg/12.png",type:"fold",childs:[
+                        {name:"商家1",img:"../image/bg/1.png"},
+                        {name:"社区2",img:"../image/bg/2.png"},
+                        {name:"优惠券3",img:"../image/bg/3.png"},
+                        {name:"团购4",img:"../image/bg/4.png"},
+                        {name:"活动5",img:"../image/bg/5.png"},
+                        {name:"订座6",img:"../image/bg/6.png"},
+                        {name:"商家7",img:"../image/bg/1.png"},
+                        {name:"社区8",img:"../image/bg/2.png"},
+                        {name:"优惠券9",img:"../image/bg/3.png"},
+                        {name:"团购10",img:"../image/bg/4.png"},
+                        {name:"活动11",img:"../image/bg/5.png"},
+                        {name:"订座12",img:"../image/bg/6.png"}
+
+                    ]},
+
+                {name:"商家2",img:"../image/bg/1.png"},
+                {name:"社区2",img:"../image/bg/2.png"},
+                {name:"优惠券2",img:"../image/bg/3.png"},
+                {name:"团购2",img:"../image/bg/4.png"},
+                {name:"活动2",img:"../image/bg/5.png"},
+                {name:"订座2",img:"../image/bg/6.png",type:"fold",childs:[
+                        {name:"商家1",img:"../image/bg/1.png"},
+                        {name:"社区2",img:"../image/bg/2.png"},
+                        {name:"优惠券3",img:"../image/bg/3.png"},
+                        {name:"团购4",img:"../image/bg/4.png"},
+                        {name:"商家5",img:"../image/bg/1.png"},
+                        {name:"社区6",img:"../image/bg/2.png"},
+                        {name:"优惠券7",img:"../image/bg/3.png"},
+                        {name:"团购8",img:"../image/bg/4.png"},
+                        {name:"团购9",img:"../image/bg/4.png"}
+
+
+                    ]},
+
+                {name:"订餐2",img:"../image/bg/7.png"},
+                {name:"会员卡2",img:"../image/bg/8.png"},
+                {name:"附近活动2",img:"../image/bg/9.png"},
+                {name:"商家",img:"../image/bg/1.png"},
+                {name:"社区",img:"../image/bg/2.png"},
+                {name:"优惠券",img:"../image/bg/3.png"},
+                {name:"团购",img:"../image/bg/4.png"},
+                {name:"活动",img:"../image/bg/5.png"},
+                {name:"订座",img:"../image/bg/6.png"},
+
+                {name:"订餐",img:"../image/bg/7.png"},
+                {name:"会员卡",img:"../image/bg/8.png"},
+                {name:"附近活动",img:"../image/bg/9.png"},
+
+
+                {name:"同城卖场",img:"../image/bg/10.png",type:"fold",childs:[
+                        {name:"商家1",img:"../image/bg/1.png"},
+                        {name:"社区2",img:"../image/bg/2.png"},
+                        {name:"优惠券3",img:"../image/bg/3.png"},
+                        {name:"团购4",img:"../image/bg/4.png"},
+                        {name:"活动5",img:"../image/bg/5.png"},
+                        {name:"订座6",img:"../image/bg/6.png"},
+                        {name:"商家7",img:"../image/bg/1.png"},
+                        {name:"社区8",img:"../image/bg/2.png"}
+
+                    ]},
+                {name:"生活信息",img:"../image/bg/11.png"},
+                {name:"公益捐助",img:"../image/bg/12.png",type:"fold",childs:[
+                        {name:"商家1",img:"../image/bg/1.png"},
+                        {name:"社区2",img:"../image/bg/2.png"},
+                        {name:"优惠券3",img:"../image/bg/3.png"},
+                        {name:"团购4",img:"../image/bg/4.png"},
+                        {name:"活动5",img:"../image/bg/5.png"},
+                        {name:"订座6",img:"../image/bg/6.png"},
+                        {name:"商家7",img:"../image/bg/1.png"},
+                        {name:"社区8",img:"../image/bg/2.png"},
+                        {name:"优惠券9",img:"../image/bg/3.png"},
+                        {name:"团购10",img:"../image/bg/4.png"},
+                        {name:"活动11",img:"../image/bg/5.png"}
+
+                    ]},
+
+                {name:"商家2",img:"../image/bg/1.png"},
+                {name:"社区2",img:"../image/bg/2.png"},
+                {name:"优惠券2",img:"../image/bg/3.png"},
+                {name:"团购2",img:"../image/bg/4.png"},
+                {name:"活动2",img:"../image/bg/5.png"},
+                {name:"订座2",img:"../image/bg/6.png",type:"fold",childs:[
+                        {name:"商家1",img:"../image/bg/1.png"},
+                        {name:"社区2",img:"../image/bg/2.png"},
+                        {name:"优惠券3",img:"../image/bg/3.png"},
+                        {name:"团购4",img:"../image/bg/4.png"},
+                        {name:"商家5",img:"../image/bg/1.png"},
+                        {name:"社区6",img:"../image/bg/2.png"},
+                        {name:"优惠券7",img:"../image/bg/3.png"},
+                        {name:"团购8",img:"../image/bg/4.png"},
+                        {name:"团购9",img:"../image/bg/4.png"}
+
+
+                    ]},
+
+                {name:"订餐2",img:"../image/bg/7.png"},
+                {name:"会员卡2",img:"../image/bg/8.png"},
+                {name:"附近活动2",img:"../image/bg/9.png"}
+
+
+
+            ],//必须传入值，如果不传入则不生成格子
+            pageHeight:"20%",
+            imageHeight:"80%",
+            fontSize:"1.5rem",
+        });
+    })
+   /* {name:"团购",img:"../image/bg/4.png"},
+    {name:"活动",img:"../image/bg/5.png"},
+    {name:"订座",img:"../image/bg/6.png"},
+
+    {name:"订餐",img:"../image/bg/7.png"},
+    {name:"会员卡",img:"../image/bg/8.png"},
+    {name:"附近活动",img:"../image/bg/9.png"},*/
+
+
+</script>
+</body>
+</html>

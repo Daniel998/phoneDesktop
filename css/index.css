@@ -1,0 +1,114 @@
+.item {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    overflow: hidden;
+    outline: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    color:#191919;
+ display: inline-block;
+    
+}
+.item div{
+    margin: 0 auto;
+    width: 62px;
+    height: 62px;
+    background-size: cover;
+}
+.item span{
+    line-height:35px
+}
+#item1{
+    left:1rem;
+    top:1rem;
+}
+#item2{
+    left:10rem;
+    top:1rem;
+}
+#item3{
+    left:20rem;
+    top:1rem;
+}
+
+#item4{
+    left:1rem;
+    top:10rem;
+}
+#item5{
+    left:10rem;
+    top:10rem;
+}
+#item6{
+    left:20rem;
+    top:10rem;
+}
+
+#item7{
+    left:1rem;
+    top:20rem;
+}
+#item8{
+    left:10rem;
+    top:20rem;
+}
+#item9{
+    left:20rem;
+    top:20rem;
+}
+
+#item10{
+    left:1rem;
+    top:30rem;
+}
+#item11{
+    left:10rem;
+    top:30rem;
+}
+#item12{
+    left:20rem;
+    top:30rem;
+}
+
+ #item1 div{
+    background-image: url("../image/bg/1.png") ;
+}
+
+#item2 div{
+    background-image: url("../image/bg/2.png") ;
+}
+
+#item3 div{
+    background-image: url("../image/bg/3.png") ;
+}
+#item4 div{
+    background-image: url("../image/bg/4.png") ;
+}
+#item5 div{
+    background-image: url("../image/bg/5.png") ;
+}
+#item6 div{
+    background-image: url("../image/bg/6.png") ;
+}
+#item7 div{
+    background-image: url("../image/bg/7.png") ;
+}
+#item8 div{
+    background-image: url("../image/bg/8.png") ;
+}
+#item9 div{
+    background-image: url("../image/bg/9.png") ;
+}
+#item10 div{
+    background-image: url("../image/bg/10.png") ;
+}
+#item11 div{
+    background-image: url("../image/bg/11.png") ;
+}
+#item12 div{
+    background-image: url("../image/bg/12.png") ;
+}
